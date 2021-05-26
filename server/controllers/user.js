@@ -11,12 +11,12 @@ module.exports = {
                 res.status(401).send('Sorry, Account Already Exists');
             } else {
                 const salt = bcrypt.genSaltSync(10)
-                const hash = bcrypt.HashSync(password, salt)
+                const hash = bcrypt.hashSync(password, salt)
                 const [newUser] = await db.users.register_user([userName, hash])
                 delete newUser.password
 
                 req.session.user = newUser
-                req.status(200).send(req.session.user)
+                res.status(200).send(req.session.user)
             }
         } catch (err) {
             console.log('Database error on register function', err)
