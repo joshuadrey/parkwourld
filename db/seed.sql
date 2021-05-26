@@ -13,8 +13,7 @@ id SERIAL PRIMARY KEY,
 name VARCHAR(100),
 rating SMALLINT,
 date_created TIMESTAMP,
-locations_id INT REFERENCES locations(id),
-user_name VARCHAR REFERENCES user(user_name),
+user_name VARCHAR REFERENCES users(user_name),
 );
 
 CREATE TABLE tricks (
