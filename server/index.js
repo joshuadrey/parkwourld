@@ -5,6 +5,7 @@ const session = require("express-session");
 const { checkUser } = require("./controllers/middleware");
 const userCtrl = require("./controllers/user");
 const rateCtrl = require("./controllers/rating");
+const locCtrl = require("./controllers/locations");
 
 const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env;
 
@@ -37,14 +38,18 @@ massive({
   })
   .catch((err) => console.log(err));
 
-  //    ENDPOINTS - USER
+//    ENDPOINTS - USER
 
-  app.post('/auth/register', userCtrl.registerUser)
-  app.post('/auth/login', userCtrl.loginUser)
-  app.post('/auth/logout', userCtrl.logoutUser)
-  app.get('/auth/user', checkUser, userCtrl.getUser)
+app.post('/auth/register', userCtrl.registerUser)
+app.post('/auth/login', userCtrl.loginUser)
+app.post('/auth/logout', userCtrl.logoutUser)
+app.get('/auth/user', checkUser, userCtrl.getUser)
 
-  // Endpoint ratings
+// Endpoint ratings
 
-  app.post('/rating/create', rateCtrl.createRating)
-  app.post('/rating/name', rateCtrl.getRating)
+app.post('/rating/create', rateCtrl.createRating)
+app.post('/rating/name', rateCtrl.getRating)
+
+// Endpoint locations
+
+app.post('/location/create', locCtrl, createLocation)
