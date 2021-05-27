@@ -52,4 +52,4 @@ app.post('/rating/name', rateCtrl.getRating)
 
 // Endpoint locations
 
-app.post('/location/create', locCtrl, createLocation)
+app.post('/location/create', locCtrl.createLocation)
