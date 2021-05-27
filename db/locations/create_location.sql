@@ -1,5 +1,5 @@
 INSERT INTO locations
-(name, image)
+(name, pay, image)
 VALUES
-($1, $2)
+($1, $2, $3)
 RETURNING *;

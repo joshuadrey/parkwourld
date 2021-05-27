@@ -6,6 +6,7 @@ password VARCHAR(100));
 CREATE TABLE locations (
 id SERIAL PRIMARY KEY,
 name VARCHAR(100),
+pay BOOLEAN NOT NULL,
 image VARCHAR(100));
 
 CREATE TABLE rating (
