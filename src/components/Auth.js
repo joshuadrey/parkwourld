@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { getUser } from '../redux/userReducer'
 import { connect } from 'react-redux'
 import axios from 'axios'
