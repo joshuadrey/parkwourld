@@ -64,8 +64,11 @@ const Auth = ({ getUser }) => {
                     name='password'
                     onChange={(e) => changeHandler(e)}
                 />
+                <div className = 'btn'>
                 <button className='sign-in-button' type='submit' onClick={loginUser}>Sign In</button>
+                
                 <button className='register-button' type='submit' onClick={registerUser}>Register</button>
+                </div>
             </form>
 
         </div>

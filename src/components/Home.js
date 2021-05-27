@@ -5,9 +5,13 @@ import Header from './Header'
 const Home = () => {
     return (
         <div className='home'>
-            <Header/>
+            <div className = 'title1'>
             <h1 className='home-title'>PARKWOURLD</h1>
+            <Header/>
+            </div>
+            <div className = 'buttons'>
             <Link to='/place' className='places-btn'>Places</Link>
+            </div>
         </div>
     )
 }
