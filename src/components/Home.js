@@ -10,7 +10,7 @@ const Home = () => {
             <Header/>
             </div>
             <div className = 'buttons'>
-            <Link to='/place' className='places-btn'>Places</Link>
+            <Link to='/places' className='places-btn'>Places</Link>
             </div>
         </div>
     )

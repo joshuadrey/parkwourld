@@ -9,7 +9,7 @@
   position: absolute;
   flex-direction: column;
   justify-content: center;
-  background: url('https://api.timeforkids.com/wp-content/uploads/2019/09/final-cover-forest.jpg');
+  background: url('https://www.litromagazine.com/wp-content/uploads/2013/08/Parkour-Josa-J%C3%BAnior-banner.jpg');
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -19,7 +19,7 @@
 .auth-title {
   font-size: 60px;
   font-family: 'Freshman';
-  color: rgb(3, 168, 3);
+  color: rgb(185, 0, 0);
   text-shadow: 5px 5px 0px black;
 }
 
@@ -82,7 +82,7 @@
 .home {
   width: 100%;
   height: 100vh;
-  background: url('https://miro.medium.com/max/7654/1*UIIieqRXQxV65VfKSbVtNg.jpeg');
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTO-tSYU0F0ie59n-Jek3zab9HXeWy1iqpa8NoZxbHoAK5lJL1cCyrTXPhvy4vC2YBj74&usqp=CAU');
   background-size: cover;
 
 }
@@ -94,12 +94,11 @@
   align-items: center;
   width: 100%;
   height: 150px;
-  margin-bottom: 200px;
 }
 
 .home-title {
   font-size: 100px;
-  color: steelblue;
+  color: rgb(209, 12, 5);
   text-shadow: 3px 3px 3px black;
 }
 
@@ -121,16 +120,20 @@ margin-right: 20px;
 }
 
 .header-link:hover {
-  color: rgb(115, 201, 252);
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  text-shadow: 1px 1px 5px rgb(255, 255, 255);
-  font-size: 22px;
+  font-size: 25px;
+}
+
+.buttons {
+  margin-top: 150px;
+
 }
 
 .places-btn {
-  color: rgb(10, 85, 247);
+  color: rgb(0, 0, 0);
   text-shadow: 1px 1px 1px black;
-  background-color: blanchedalmond;
+  background-color: rgb(255, 0, 0);
   font-size: 40px;
   text-decoration: none;
   border: solid 3px black;
@@ -138,9 +141,9 @@ margin-right: 20px;
 }
 
 .places-btn:hover {
-  color: rgb(54, 115, 247);
+  color: rgb(250, 0, 0);
   text-shadow: 1px 1px 1px black;
-  background-color: rgb(252, 241, 225);
+  background-color: rgb(0, 0, 0);
   font-size: 40px;
   text-decoration: none;
   border: solid 3px black;
@@ -148,4 +151,98 @@ margin-right: 20px;
 }
 
 
-/* https://store-images.s-microsoft.com/image/apps.3019.13682773009232620.62a18cea-40b3-43f1-811b-46ef9d15331b.65de590b-a24c-4a6d-a808-5e2537445900?w=672&h=378&q=80&mode=letterbox&background=%23FFE4E4E4&format=jpg */
+.places {
+  background: url('https://www.topendsports.com/sport/images/parkour-freeimages.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+}
+
+.place-title {
+  font-size: 100px;
+  font-family: 'Who asks Satan';
+  letter-spacing: 13px;
+}
+
+.btn-filters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn1 {
+  width: 60px;
+  height: 40px;
+  font-size: 40px;
+  font-family: 'Who asks Satan';
+  margin-right: 250px;
+  margin-left: 150px;
+  border: none;
+  background-color: transparent;
+}
+
+.btn1:hover {
+  width: 60px;
+  height: 40px;
+  font-size: 40px;
+  color: whitesmoke;
+  text-shadow: 2px 2px 3px black;
+  font-family: 'Who asks Satan';
+  margin-right: 250px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn2 {
+  width: 60px;
+  height: 40px;
+  font-size: 40px;
+  font-family: 'Who asks Satan';
+  margin-right: 200px;
+  border: none;
+  background-color: transparent;
+}
+
+.btn2:hover {
+  width: 60px;
+  height: 40px;
+  font-size: 40px;
+  color: whitesmoke;
+  text-shadow: 2px 2px 3px black;
+  font-family: 'Who asks Satan';
+  margin-right: 200px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn3 {
+  width: 60px;
+  height: 40px;
+  font-size: 40px;
+  font-family: 'Who asks Satan';
+  margin-right: 250px;
+  border: none;
+  background-color: transparent;
+}
+
+.btn3:hover {
+  width: 60px;
+  height: 40px;
+  font-size: 40px;
+  color: whitesmoke;
+  text-shadow: 2px 2px 3px black;
+  font-family: 'Who asks Satan';
+  margin-right: 250px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+
+
+
