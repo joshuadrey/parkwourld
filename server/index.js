@@ -6,6 +6,7 @@ const { checkUser } = require("./controllers/middleware");
 const userCtrl = require("./controllers/user");
 const rateCtrl = require("./controllers/rating");
 const locCtrl = require("./controllers/locations");
+const tricksCtrl = require("./controllers/tricks");
 
 const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env;
 
@@ -52,5 +53,10 @@ app.post('/rating/name', rateCtrl.getRating)
 
 // Endpoint locations
 
+app.get('/location/get', locCtrl.getLocations)
 app.post('/location/create', locCtrl.createLocation)
+
+// Endpoint tricks
+
+app.get('/tricks/get', tricksCtrl.getTricks)
 

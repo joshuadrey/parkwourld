@@ -10,6 +10,7 @@ const Home = () => {
             <Header/>
             </div>
             <div className = 'buttons'>
+            <Link to='/tricks' className='tricks-btn'>Tricks</Link>
             <Link to='/places' className='places-btn'>Places</Link>
             </div>
         </div>
