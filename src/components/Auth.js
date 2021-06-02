@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react'
 import { getUser } from '../redux/userReducer'
 import { connect } from 'react-redux'

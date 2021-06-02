@@ -3,8 +3,9 @@ import Auth from './components/Auth'
 import Home from './components/Home'
 import Places from './components/Places'
 import Tricks from './components/Tricks'
-import Ratings from './components/Ratings'
+import RatingsPage from './components/RatingsPage'
 import { HashRouter as Switch, Route } from 'react-router-dom'
+
 
 
 export default (
@@ -13,6 +14,6 @@ export default (
         <Route exact path='/home' component={Home} />
         <Route exact path='/places' component={Places} />
         <Route exact path='/tricks' component={Tricks} />
-        <Route exact path='/ratings' component={Ratings} />
+        <Route exact path='/ratings' component={RatingsPage} />
     </Switch>
 )

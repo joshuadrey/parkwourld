@@ -13,8 +13,9 @@ CREATE TABLE rating (
 id SERIAL PRIMARY KEY,
 name VARCHAR(100),
 rating SMALLINT,
+comment TEXT,
 date_created TIMESTAMP,
-user_name VARCHAR REFERENCES users(user_name),
+user_name VARCHAR REFERENCES users(user_name)
 );
 
 CREATE TABLE tricks (

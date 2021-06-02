@@ -81,6 +81,7 @@
 }
 
 
+
 /* -----------Home Page-------------- */
 
 
@@ -179,6 +180,27 @@ margin-right: 20px;
   box-shadow: 1px 1px 5px rgb(131, 0, 0);
 }
 
+@media (max-width: 995px) {
+  
+  .home-title {
+    font-size: 60px;
+    margin-right: 90px;
+  }
+
+
+  .header-component{
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+  .menu:hover {
+cursor: pointer;
+}
+
+}
+
 
 
 /* -----------Tricks Page-------------- */
@@ -243,7 +265,7 @@ margin-right: 20px;
   font-size: 30px;
   letter-spacing: 3px;
   text-shadow: 2px 2px 1px black;
-  width: 290px;
+  width: 300px;
   margin-top: 5px;
 }
 
@@ -267,6 +289,78 @@ margin-right: 20px;
 }
 
 
+@media (max-width: 995px) {
+  
+  .tricks-title {
+    font-size: 60px;
+    margin-right: 90px;
+  }
+
+  .tricks-images {
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    margin-left: 60px;
+  }
+  
+  /* width */
+  .tricks-images::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .tricks-images::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  /* Handle */
+  .tricks-images::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+  }
+  
+  /* Handle on hover */
+  .tricks-images::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+  }
+
+  .individual-tricks {
+    background-color: transparent;
+    border: solid 2px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 1px black;
+    width: 200px;
+    margin-top: 5px;
+  }
+
+  .vids {
+    width: 200px;
+    height: auto;
+  }
+
+  .header-component{
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+  .menu:hover {
+cursor: pointer;
+}
+
+}
+
+
 
 /* -----------Places Page-------------- */
 
@@ -276,7 +370,6 @@ margin-right: 20px;
   background-size: cover;
   width: 100%;
   height: 100vh;
-  align-items: center;
 }
 
 .place-title {
@@ -297,6 +390,8 @@ margin-right: 20px;
   height: 40px;
   font-size: 40px;
   font-family: 'Who asks Satan';
+  color: black;
+  text-shadow: 3px 3px 1px white;
   margin-right: 200px;
   margin-left: 150px;
   border: none;
@@ -308,9 +403,10 @@ margin-right: 20px;
   height: 40px;
   font-size: 40px;
   color: whitesmoke;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 3px 3px 1px black;
   font-family: 'Who asks Satan';
   margin-right: 200px;
+  margin-left: 150px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -321,6 +417,7 @@ margin-right: 20px;
   height: 40px;
   font-size: 40px;
   font-family: 'Who asks Satan';
+  text-shadow: 3px 3px 1px white;
   margin-right: 200px;
   border: none;
   background-color: transparent;
@@ -331,7 +428,7 @@ margin-right: 20px;
   height: 40px;
   font-size: 40px;
   color: whitesmoke;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 3px 3px 1px black;
   font-family: 'Who asks Satan';
   margin-right: 200px;
   border: none;
@@ -344,6 +441,7 @@ margin-right: 20px;
   height: 40px;
   font-size: 40px;
   font-family: 'Who asks Satan';
+  text-shadow: 3px 3px 1px white;
   margin-right: 200px;
   border: none;
   background-color: transparent;
@@ -354,7 +452,7 @@ margin-right: 20px;
   height: 40px;
   font-size: 40px;
   color: whitesmoke;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 3px 3px 1px black;
   font-family: 'Who asks Satan';
   margin-right: 200px;
   border: none;
@@ -367,6 +465,7 @@ margin-right: 20px;
   height: 40px;
   font-size: 40px;
   font-family: 'Who asks Satan';
+  text-shadow: 3px 3px 1px white;
   margin-right: 200px;
   border: none;
   background-color: transparent;
@@ -377,7 +476,7 @@ margin-right: 20px;
   height: 40px;
   font-size: 40px;
   color: whitesmoke;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 3px 3px 1px black;
   font-family: 'Who asks Satan';
   margin-right: 200px;
   border: none;
@@ -394,6 +493,7 @@ margin-right: 20px;
   overflow: auto;
   justify-content: space-evenly;
   margin-top: 40px;
+  margin-left: 40px;
 }
 
 
@@ -463,6 +563,178 @@ margin-right: 20px;
   font-size: 32px;
 }
 
+@media (max-width: 995px) {
+  
+  .place-title {
+    font-size: 60px;
+    margin-right: 90px;
+  }
+
+  .btn-filters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn1 {
+    width: 30px;
+    height: 20px;
+    font-size: 40px;
+    font-family: 'Who asks Satan';
+    margin-right: 100px;
+    margin-left: 80px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .btn1:hover {
+    width: 30px;
+    height: 20px;
+    font-size: 40px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px black;
+    font-family: 'Who asks Satan';
+    margin-right: 100px;
+    margin-left: 80px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .btn2 {
+    width: 30px;
+    height: 20px;
+    font-size: 40px;
+    font-family: 'Who asks Satan';
+    margin-right: 100px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .btn2:hover {
+    width: 30px;
+    height: 20px;
+    font-size: 40px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px black;
+    font-family: 'Who asks Satan';
+    margin-right: 100px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .btn3 {
+    width: 30px;
+    height: 20px;
+    font-size: 40px;
+    font-family: 'Who asks Satan';
+    margin-right: 100px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .btn3:hover {
+    width: 30px;
+    height: 20px;
+    font-size: 40px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px black;
+    font-family: 'Who asks Satan';
+    margin-right: 100px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .btn4 {
+    width: 30px;
+    height: 20px;
+    font-size: 40px;
+    font-family: 'Who asks Satan';
+    margin-right: 100px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .btn4:hover {
+    width: 30px;
+    height: 20px;
+    font-size: 40px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px black;
+    font-family: 'Who asks Satan';
+    margin-right: 100px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .location-images {
+    width: 90%;
+    height: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    margin-left: 30px;
+  }
+  
+  /* width */
+  .location-images::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .location-images::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  /* Handle */
+  .location-images::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+  }
+  
+  /* Handle on hover */
+  .location-images::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+  }
+
+  .individual-locations {
+    background-color: transparent;
+    border: solid 2px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 1px black;
+    width: 200px;
+    margin-top: 5px;
+  }
+
+  .pics {
+    width: 90%;
+    height: auto;
+  }
+
+  .header-component{
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+  .menu:hover {
+cursor: pointer;
+}
+
+}
+
 
 /* -----------Ratings Page-------------- */
 
@@ -504,6 +776,43 @@ margin-right: 20px;
   text-decoration: none;
   font-size: 35px;
   font-family: 'Who asks Satan';
+}
+
+
+
+
+@media (max-width: 995px) {
+  .ratings {
+    background: url('https://static.dw.com/image/18579663_101.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+  }
+  
+  .ratings-title  {
+    color: red;
+    text-shadow: 3px 3px 2px white;
+    font-size: 100px;
+    font-family: 'Karma';
+    letter-spacing: 13px;
+    margin-left: 20%;
+    
+    }
+  
+  .title2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    height: 150px;
+  }
+  
+  .header-link1 {
+    display: none;
+  }
+  
+  
 }
 
 
