@@ -87,7 +87,7 @@ const RatingsPage = () => {
             </div>
             <div className='search-container'>
                 <input
-                    className="name"
+                    className="searchbar"
                     type="text"
                     value={ratingInput}
                     placeholder="SEARCH REVIEWS"

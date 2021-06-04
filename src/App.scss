@@ -1,11 +1,21 @@
+// -------------Variables-----------------
 
-/* -----------Sign-In Page-------------- */
+$prime-color: rgb(255, 255, 255);
+$secondary-color: rgb(255, 0, 0);
+$third-color: rgb(0, 0, 0);
 
+// /* -----------Sign-In Page-------------- */
+
+.some {
+
+}
 .App {
   text-align: center;
   width: 100%;
   height: 100%;
 }
+  
+ 
 
 .auth {
   display: flex;
@@ -22,8 +32,8 @@
 .auth-title {
   font-size: 60px;
   font-family: 'Revamped';
-  color: rgb(0, 0, 0);
-  text-shadow: 5px 5px 0px rgb(255, 0, 0);
+  color: $third-color;
+  text-shadow: 5px 5px 0px $secondary-color;
 }
 
 
@@ -47,27 +57,27 @@
   width: 80px;
   height: 40px;
   margin-right: 30px;
-  box-shadow: 3px 3px 5px black;
+  box-shadow: 3px 3px 5px $third-color;
 }
 
 .sign-in-button:hover {
   width: 85px;
   height: 45px;
   margin-right: 30px;
-  box-shadow: 3px 3px 5px black;
+  box-shadow: 3px 3px 5px $third-color;
   cursor: pointer;
 }
 
 .register-button {
   width: 80px;
   height: 40px;
-  box-shadow: 3px 3px 5px black;
+  box-shadow: 3px 3px 5px $third-color;
 }
 
 .register-button:hover {
   width: 85px;
   height: 45px;
-  box-shadow: 3px 3px 5px black;
+  box-shadow: 3px 3px 5px $third-color;
   cursor: pointer;
 }
 
@@ -83,7 +93,7 @@
 
 
 
-/* -----------Home Page-------------- */
+// /* -----------Home Page-------------- */
 
 
 .home {
@@ -107,8 +117,8 @@
   font-size: 90px;
   font-family: 'Melted Monster';
   letter-spacing: 5px;
-  color: rgb(209, 12, 5);
-  text-shadow: 3px 3px 3px black;
+  color: $secondary-color;
+  text-shadow: 3px 3px 3px $third-color;
 }
 
 
@@ -122,14 +132,14 @@ margin-right: 20px;
 }
 
 .header-link {
-  color: rgb(255, 255, 255);
+  color: $prime-color;
   text-decoration: none;
-  text-shadow: 3px 3px 3px black;
+  text-shadow: 3px 3px 3px $third-color;
   font-size: 20px;
 }
 
 .header-link:hover {
-  color: rgb(255, 255, 255);
+  color: $prime-color;
   text-decoration: none;
   font-size: 35px;
   font-family: 'Who asks Satan';
@@ -140,44 +150,44 @@ margin-right: 20px;
 }
 
 .places-btn {
-  color: rgb(0, 0, 0);
-  text-shadow: 1px 1px 1px black;
-  background-color: rgb(255, 0, 0);
+  color: $third-color;
+  text-shadow: 1px 1px 1px $third-color;
+  background-color: $secondary-color;
   font-size: 40px;
   text-decoration: none;
-  border: solid 3px black;
-  box-shadow: 1px 1px 5px black;
+  border: solid 3px $third-color;
+  box-shadow: 1px 1px 5px $third-color;
 }
 
 .places-btn:hover {
-  color: rgb(250, 0, 0);
-  text-shadow: 1px 1px 1px black;
-  background-color: rgb(0, 0, 0);
+  color: $secondary-color;
+  text-shadow: 1px 1px 1px $third-color;
+  background-color: $third-color;
   font-size: 40px;
   text-decoration: none;
-  border: solid 3px rgb(253, 0, 0);
+  border: solid 3px $secondary-color;
   box-shadow: 1px 1px 5px rgb(131, 0, 0);
 }
 
 .tricks-btn {
-  color: rgb(0, 0, 0);
+  color: $third-color;
   margin-right: 40px;
-  text-shadow: 1px 1px 1px black;
-  background-color: rgb(255, 0, 0);
+  text-shadow: 1px 1px 1px $third-color;
+  background-color: $secondary-color;
   font-size: 40px;
   text-decoration: none;
-  border: solid 3px black;
-  box-shadow: 1px 1px 5px black;
+  border: solid 3px $third-color;
+  box-shadow: 1px 1px 5px $third-color;
 }
 
 
 .tricks-btn:hover {
-  color: rgb(250, 0, 0);
-  text-shadow: 1px 1px 1px black;
-  background-color: rgb(0, 0, 0);
+  color: $secondary-color;
+  text-shadow: 1px 1px 1px $third-color;
+  background-color: $third-color;
   font-size: 40px;
   text-decoration: none;
-  border: solid 3px rgb(253, 0, 0);
+  border: solid 3px $secondary-color;
   box-shadow: 1px 1px 5px rgb(131, 0, 0);
 }
 
@@ -192,14 +202,14 @@ margin-right: 20px;
     font-size: 15px;
     margin: 0px;
     margin-top: 100px;
-    color: black;
-    text-shadow: 2px 2px 3px white;
+    color: $third-color;
+    text-shadow: 2px 2px 3px $prime-color;
     background-color: whitesmoke;
 
    }
 
    .header-link:hover {
-    color: rgb(0, 0, 0);
+    color: $third-color;
     text-decoration: none;
     font-size: 35px;
     font-family: 'Who asks Satan';
@@ -218,7 +228,7 @@ cursor: pointer;
 
 
 
-/* -----------Tricks Page-------------- */
+// /* -----------Tricks Page-------------- */
 
 .tricks {
   background: url('https://tse1.mm.bing.net/th?id=OIP.hwkrUQDrKJST-vkSGmls8QHaDj&pid=Api&P=0&w=358&h=173');
@@ -231,8 +241,8 @@ cursor: pointer;
 
 .tricks-title {
   font-size: 100px;
-  color: rgb(0, 0, 0);
-  text-shadow: 2px 2px 1px red;
+  color: $third-color;
+  text-shadow: 2px 2px 1px $secondary-color;
   font-family: 'Sectar';
   letter-spacing: 13px;
 }
@@ -255,31 +265,31 @@ cursor: pointer;
 
 /* Track */
 .tricks-images::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: $prime-color;
 }
 
 /* Handle */
 .tricks-images::-webkit-scrollbar-thumb {
-  background: rgb(0, 0, 0);
+  background: $third-color;
 }
 
 /* Handle on hover */
 .tricks-images::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 0, 0);
+  background: $third-color;
 }
 
 
 .individual-tricks {
   background-color: transparent;
-  border: solid 2px white;
+  border: solid 2px $prime-color;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: $prime-color;
   font-size: 30px;
   letter-spacing: 3px;
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 2px 2px 1px $third-color;
   width: 300px;
   margin-top: 5px;
 }
@@ -328,30 +338,30 @@ cursor: pointer;
   
   /* Track */
   .tricks-images::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: $prime-color;
   }
   
   /* Handle */
   .tricks-images::-webkit-scrollbar-thumb {
-    background: rgb(0, 0, 0);
+    background: $third-color;
   }
   
   /* Handle on hover */
   .tricks-images::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 0, 0);
+    background: $third-color;
   }
 
   .individual-tricks {
     background-color: transparent;
-    border: solid 2px white;
+    border: solid 2px $prime-color;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: $prime-color;
     font-size: 15px;
     letter-spacing: 3px;
-    text-shadow: 2px 2px 1px black;
+    text-shadow: 2px 2px 1px $third-color;
     width: 200px;
     margin-top: 5px;
   }
@@ -366,14 +376,14 @@ cursor: pointer;
     margin: 0px;
     margin-top: 100px;
     color: black;
-    text-shadow: 2px 2px 3px white;
+    text-shadow: 2px 2px 3px $prime-color;
     background-color: whitesmoke;
 
 
    }
 
    .header-link:hover {
-    color: rgb(0, 0, 0);
+    color: $third-color;
     text-decoration: none;
     font-size: 35px;
     font-family: 'Who asks Satan';
@@ -392,7 +402,7 @@ cursor: pointer;
 
 
 
-/* -----------Places Page-------------- */
+// /* -----------Places Page-------------- */
 
 
 .places {
@@ -420,8 +430,8 @@ cursor: pointer;
   height: 40px;
   font-size: 40px;
   font-family: 'Who asks Satan';
-  color: black;
-  text-shadow: 3px 3px 1px white;
+  color: $third-color;
+  text-shadow: 3px 3px 1px $prime-color;
   margin-right: 200px;
   margin-left: 150px;
   border: none;
@@ -433,7 +443,7 @@ cursor: pointer;
   height: 40px;
   font-size: 40px;
   color: whitesmoke;
-  text-shadow: 3px 3px 1px black;
+  text-shadow: 3px 3px 1px $third-color;
   font-family: 'Who asks Satan';
   margin-right: 200px;
   margin-left: 150px;
@@ -447,7 +457,7 @@ cursor: pointer;
   height: 40px;
   font-size: 40px;
   font-family: 'Who asks Satan';
-  text-shadow: 3px 3px 1px white;
+  text-shadow: 3px 3px 1px $prime-color;
   margin-right: 200px;
   border: none;
   background-color: transparent;
@@ -458,7 +468,7 @@ cursor: pointer;
   height: 40px;
   font-size: 40px;
   color: whitesmoke;
-  text-shadow: 3px 3px 1px black;
+  text-shadow: 3px 3px 1px $third-color;
   font-family: 'Who asks Satan';
   margin-right: 200px;
   border: none;
@@ -471,7 +481,7 @@ cursor: pointer;
   height: 40px;
   font-size: 40px;
   font-family: 'Who asks Satan';
-  text-shadow: 3px 3px 1px white;
+  text-shadow: 3px 3px 1px $prime-color;
   margin-right: 200px;
   border: none;
   background-color: transparent;
@@ -482,7 +492,7 @@ cursor: pointer;
   height: 40px;
   font-size: 40px;
   color: whitesmoke;
-  text-shadow: 3px 3px 1px black;
+  text-shadow: 3px 3px 1px $third-color;
   font-family: 'Who asks Satan';
   margin-right: 200px;
   border: none;
@@ -495,7 +505,7 @@ cursor: pointer;
   height: 40px;
   font-size: 40px;
   font-family: 'Who asks Satan';
-  text-shadow: 3px 3px 1px white;
+  text-shadow: 3px 3px 1px $prime-color;
   margin-right: 200px;
   border: none;
   background-color: transparent;
@@ -506,7 +516,7 @@ cursor: pointer;
   height: 40px;
   font-size: 40px;
   color: whitesmoke;
-  text-shadow: 3px 3px 1px black;
+  text-shadow: 3px 3px 1px $third-color;
   font-family: 'Who asks Satan';
   margin-right: 200px;
   border: none;
@@ -534,31 +544,31 @@ cursor: pointer;
 
 /* Track */
 .location-images::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: $prime-color;
 }
 
 /* Handle */
 .location-images::-webkit-scrollbar-thumb {
-  background: rgb(0, 0, 0);
+  background: $third-color;
 }
 
 /* Handle on hover */
 .location-images::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 0, 0);
+  background: $third-color;
 }
 
 .individual-locations {
   background-color: transparent;
-  border: solid 2px white;
+  border: solid 2px $prime-color;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: $prime-color;
   font-family: 'Enchanted Land';
   font-size: 30px;
   letter-spacing: 3px;
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 2px 2px 1px $third-color;
   width: 290px;
   margin-top: 5px;
 }
@@ -579,17 +589,17 @@ cursor: pointer;
   margin-top: 10px;
   margin-bottom: 10px;
   text-decoration: none;
-  color: white;
-  text-shadow: 2px 2px 1px black;
+  color: $prime-color;
+  text-shadow: 2px 2px 1px $third-color;
   font-size: 30px;
-  border: solid 2px white;
-  box-shadow: 2px 2px 4px black;
+  border: solid 2px $prime-color;
+  box-shadow: 2px 2px 4px $third-color;
 }
 
 .ratings-btn:hover {
   text-decoration: none;
-  color: white;
-  text-shadow: 2px 2px 1px black;
+  color: $prime-color;
+  text-shadow: 2px 2px 1px $third-color;
   font-size: 32px;
 }
 
@@ -622,7 +632,7 @@ cursor: pointer;
     height: 20px;
     font-size: 40px;
     color: whitesmoke;
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 2px 2px 3px $third-color;
     font-family: 'Who asks Satan';
     margin-right: 100px;
     margin-left: 80px;
@@ -646,7 +656,7 @@ cursor: pointer;
     height: 20px;
     font-size: 40px;
     color: whitesmoke;
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 2px 2px 3px $third-color;
     font-family: 'Who asks Satan';
     margin-right: 100px;
     border: none;
@@ -669,7 +679,7 @@ cursor: pointer;
     height: 20px;
     font-size: 40px;
     color: whitesmoke;
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 2px 2px 3px $third-color;
     font-family: 'Who asks Satan';
     margin-right: 100px;
     border: none;
@@ -692,7 +702,7 @@ cursor: pointer;
     height: 20px;
     font-size: 40px;
     color: whitesmoke;
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 2px 2px 3px $third-color;
     font-family: 'Who asks Satan';
     margin-right: 100px;
     border: none;
@@ -718,30 +728,30 @@ cursor: pointer;
   
   /* Track */
   .location-images::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: $prime-color;
   }
   
   /* Handle */
   .location-images::-webkit-scrollbar-thumb {
-    background: rgb(0, 0, 0);
+    background: $third-color;
   }
   
   /* Handle on hover */
   .location-images::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 0, 0);
+    background: $third-color;
   }
 
   .individual-locations {
     background-color: transparent;
-    border: solid 2px white;
+    border: solid 2px $prime-color;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: $prime-color;
     font-size: 15px;
     letter-spacing: 3px;
-    text-shadow: 2px 2px 1px black;
+    text-shadow: 2px 2px 1px $third-color;
     width: 200px;
     margin-top: 5px;
   }
@@ -755,14 +765,14 @@ cursor: pointer;
       font-size: 15px;
       margin: 0px;
       margin-top: 100px;
-      color: black;
-      text-shadow: 2px 2px 3px white;
+      color: $third-color;
+      text-shadow: 2px 2px 3px $prime-color;
       background-color: whitesmoke;
 
      }
 
      .header-link:hover {
-      color: rgb(0, 0, 0);
+      color: $third-color;
       text-decoration: none;
       font-size: 35px;
       font-family: 'Who asks Satan';
@@ -780,7 +790,7 @@ cursor: pointer;
 }
 
 
-/* -----------Ratings Page-------------- */
+// /* -----------Ratings Page-------------- */
 
 
 .ratings {
@@ -792,8 +802,8 @@ cursor: pointer;
 }
 
 .ratings-title  {
-  color: red;
-  text-shadow: 3px 3px 2px white;
+  color: $secondary-color;
+  text-shadow: 3px 3px 2px $prime-color;
   font-size: 150px;
   font-family: 'Karma';
   letter-spacing: 13px;
@@ -808,18 +818,25 @@ cursor: pointer;
 }
 
 .header-link1 {
-  color: rgb(255, 255, 255);
+  color: $prime-color;
   text-decoration: none;
-  text-shadow: 3px 3px 3px black;
+  text-shadow: 3px 3px 3px $third-color;
   font-size: 20px;
   margin-left: 100px;
 }
 
 .header-link1:hover {
-  color: rgb(255, 255, 255);
+  color: $prime-color;
   text-decoration: none;
   font-size: 35px;
   font-family: 'Who asks Satan';
+}
+
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 
@@ -835,8 +852,8 @@ cursor: pointer;
   }
   
   .ratings-title  {
-    color: red;
-    text-shadow: 3px 3px 2px white;
+    color: $secondary-color;
+    text-shadow: 3px 3px 2px $prime-color;
     font-size: 100px;
     font-family: 'Karma';
     letter-spacing: 13px;
@@ -856,14 +873,14 @@ cursor: pointer;
     font-size: 15px;
     margin: 0px;
     margin-top: 100px;
-    color: black;
-    text-shadow: 2px 2px 3px white;
+    color: $third-color;
+    text-shadow: 2px 2px 3px $prime-color;
     background-color: whitesmoke;
 
   }
 
   .header-link1:hover {
-    color: rgb(0, 0, 0);
+    color: $third-color;
     text-decoration: none;
     font-size: 35px;
     font-family: 'Who asks Satan';
@@ -873,14 +890,14 @@ cursor: pointer;
   
 }
 
-/* ---------------Create Review Page Pop Up--------------- */
+// /* ---------------Create Review Page Pop Up--------------- */
 
 
 .whole-page {
 background-color: rgb(255, 0, 0, 0.781);
 width: 100%;
 height: 90%;
-border: solid 2px red;
+border: solid 2px $secondary-color;
 border-bottom: none;
 }
 
@@ -896,7 +913,7 @@ border-bottom: none;
 
 .create-rating-title {
   font-size: 70px;
-  text-shadow: 3px 3px 2px white;
+  text-shadow: 3px 3px 2px $prime-color;
   font-family: 'Karma';
   letter-spacing: 10px;
 }
@@ -926,14 +943,14 @@ border-bottom: none;
   margin-top: 15px;
   height: 30px;
   cursor: pointer;
-  background-color: white;
+  background-color: $prime-color;
 }
 
 .reset-btn-page {
   background-color: rgba(255, 0, 0, 0.781);
   width: 100%;
   height: 10%;
-  border: solid 2px red;
+  border: solid 2px $secondary-color;
   border-top: none;
   display: flex;
   flex-direction: row-reverse;
@@ -955,13 +972,13 @@ border-bottom: none;
   align-items: center;
   margin-right: 300px;
   cursor: pointer;
-  background-color: white;
+  background-color: $prime-color;
 }
 
 @media (max-width: 995px) {
   .create-rating-title {
     font-size: 35px;
-    text-shadow: 3px 3px 2px white;
+    text-shadow: 3px 3px 2px $prime-color;
     font-family: 'Karma';
     letter-spacing: 10px;
   }
@@ -982,21 +999,54 @@ border-bottom: none;
     align-items: center;
     margin-right: 100px;
     cursor: pointer;
-    background-color: white;
+    background-color: $prime-color;
   }
 }
 
 
 .mapped-reviews {
-  background-color: rgba(255, 0, 0, 0.781);
-  width: 100%;
-  height: auto;
+  border: solid 2px rgba(255, 255, 255, 0.781);
+  width: 98%;
+  height: 70%;
   display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 15px;
+}
+/* width */
+.mapped-reviews::-webkit-scrollbar {
+  width: 10px;
 }
 
-.span {
-  margin-left: 100px;
+/* Track */
+.mapped-reviews::-webkit-scrollbar-track {
+  background: $prime-color;
 }
+
+/* Handle */
+.mapped-reviews::-webkit-scrollbar-thumb {
+  background: $third-color;
+}
+
+/* Handle on hover */
+.mapped-reviews::-webkit-scrollbar-thumb:hover {
+  background: $third-color;
+}
+
+.review-boss {
+  background-color: rgb(255, 0, 0, 0.781);
+  border: solid 3px $third-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 250px;
+  padding: 0;
+  margin: 10px;
+}
+
+
 
