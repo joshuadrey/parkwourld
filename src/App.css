@@ -1,3 +1,4 @@
+
 /* -----------Sign-In Page-------------- */
 
 .App {
@@ -103,7 +104,7 @@
 }
 
 .home-title {
-  font-size: 100px;
+  font-size: 90px;
   font-family: 'Melted Monster';
   letter-spacing: 5px;
   color: rgb(209, 12, 5);
@@ -184,12 +185,26 @@ margin-right: 20px;
   
   .home-title {
     font-size: 60px;
-    margin-right: 90px;
   }
 
 
-  .header-component{
-    display: none;
+  .header-link{
+    font-size: 15px;
+    margin: 0px;
+    margin-top: 100px;
+    color: black;
+    text-shadow: 2px 2px 3px white;
+    background-color: whitesmoke;
+
+   }
+
+   .header-link:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 35px;
+    font-family: 'Who asks Satan';
+    background-color: whitesmoke;
+
   }
 
   .menu {
@@ -293,7 +308,6 @@ cursor: pointer;
   
   .tricks-title {
     font-size: 60px;
-    margin-right: 90px;
   }
 
   .tricks-images {
@@ -347,8 +361,24 @@ cursor: pointer;
     height: auto;
   }
 
-  .header-component{
-    display: none;
+  .header-link{
+    font-size: 15px;
+    margin: 0px;
+    margin-top: 100px;
+    color: black;
+    text-shadow: 2px 2px 3px white;
+    background-color: whitesmoke;
+
+
+   }
+
+   .header-link:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 35px;
+    font-family: 'Who asks Satan';
+    background-color: whitesmoke;
+
   }
 
   .menu {
@@ -567,7 +597,6 @@ cursor: pointer;
   
   .place-title {
     font-size: 60px;
-    margin-right: 90px;
   }
 
   .btn-filters {
@@ -722,9 +751,24 @@ cursor: pointer;
     height: auto;
   }
 
-  .header-component{
-    display: none;
-  }
+  .header-link{
+      font-size: 15px;
+      margin: 0px;
+      margin-top: 100px;
+      color: black;
+      text-shadow: 2px 2px 3px white;
+      background-color: whitesmoke;
+
+     }
+
+     .header-link:hover {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-size: 35px;
+      font-family: 'Who asks Satan';
+      background-color: whitesmoke;
+
+    }
 
   .menu {
     display: flex;
@@ -809,11 +853,150 @@ cursor: pointer;
   }
   
   .header-link1 {
-    display: none;
+    font-size: 15px;
+    margin: 0px;
+    margin-top: 100px;
+    color: black;
+    text-shadow: 2px 2px 3px white;
+    background-color: whitesmoke;
+
   }
-  
+
+  .header-link1:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 35px;
+    font-family: 'Who asks Satan';
+    background-color: whitesmoke;
+
+  }
   
 }
 
+/* ---------------Create Review Page Pop Up--------------- */
 
+
+.whole-page {
+background-color: rgb(255, 0, 0, 0.781);
+width: 100%;
+height: 90%;
+border: solid 2px red;
+border-bottom: none;
+}
+
+
+.create-form {
+  width: 100%;
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-rating-title {
+  font-size: 70px;
+  text-shadow: 3px 3px 2px white;
+  font-family: 'Karma';
+  letter-spacing: 10px;
+}
+
+.place-name-box {
+  width: 350px;
+  height: 25px;
+}
+
+.stars {
+  margin-top: 15px;
+}
+
+.your-review {
+  margin-top: 15px;
+  width: 350px;
+  height: 25px;
+}
+
+.submit-review {
+  margin-top: 15px;
+  height: 30px;
+  background-color: rgb(233, 215, 215);
+}
+
+.submit-review:hover {
+  margin-top: 15px;
+  height: 30px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.reset-btn-page {
+  background-color: rgba(255, 0, 0, 0.781);
+  width: 100%;
+  height: 10%;
+  border: solid 2px red;
+  border-top: none;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.reset-btn {
+  width: 35px;
+  height: 35px;
+  font-size: 25px;
+  align-items: center;
+  margin-right: 300px;
+  background-color: rgb(233, 215, 215);
+}
+
+.reset-btn:hover {
+  width: 35px;
+  height: 35px;
+  font-size: 25px;
+  align-items: center;
+  margin-right: 300px;
+  cursor: pointer;
+  background-color: white;
+}
+
+@media (max-width: 995px) {
+  .create-rating-title {
+    font-size: 35px;
+    text-shadow: 3px 3px 2px white;
+    font-family: 'Karma';
+    letter-spacing: 10px;
+  }
+
+  .reset-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    align-items: center;
+    margin-right: 100px;
+    background-color: rgb(233, 215, 215);
+  }
+  
+  .reset-btn:hover {
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    align-items: center;
+    margin-right: 100px;
+    cursor: pointer;
+    background-color: white;
+  }
+}
+
+
+.mapped-reviews {
+  background-color: rgba(255, 0, 0, 0.781);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.span {
+  margin-left: 100px;
+}
 

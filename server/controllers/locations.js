@@ -1,9 +1,10 @@
 module.exports = {
     createLocation: async (req, res) => {
         const db = req.app.get('db')
-        let {name, image} = req.body
-        const newLocation = await db.review.create_location(
+        let {name, pay, image} = req.body
+        const newLocation = await db.locations.create_location(
             name,
+            pay,
             image
         ) 
         if (newLocation) {

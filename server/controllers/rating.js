@@ -1,11 +1,11 @@
 module.exports = {
     getRating: async (req, res) => {
         const db = req.app.get('db')
-        const {name} = req.body
-        const review = await db.ratings.get_rating(name)
+        const { name } = req.body
+        const rating = await db.ratings.get_rating(name)
 
-        if (review) {
-            res.status(200).send(review)
+        if (rating) {
+            res.status(200).send(rating)
         } else {
             res.status(400).send('No ratings found')
         }
@@ -13,19 +13,35 @@ module.exports = {
 
     createRating: async (req, res) => {
         const db = req.app.get('db')
-        let {name, rating} = req.body
-        let {user_name} = req.session.user;
+        let { name, rating, comment } = req.body
+        let { user_name } = req.session.user;
         let date = new Date()
-        const newReview = await db.review.create_rating(
+        const newRating = await db.ratings.create_rating(
             name,
             rating,
+            comment,
             date,
-            user_name 
-        ) 
-        if (newReview) {
-            res.status(200).send(newReview)
+            user_name
+        )
+        if (newRating) {
+            res.status(200).send(newRating)
         } else {
             res.status(400).send('Rating not created')
         }
     },
+
+    updateRating: async (req, res) => {
+        const db = req.app.get('db')
+        let { name, rating, comment } = req.body
+        const editRating = await db.ratings.edit_rating(
+            name,
+            rating,
+            comment,
+        )
+        if (editRating) {
+            res.status(200).send(editRating)
+        } else {
+            res.status(400).send('Rating not updated')
+        }
+    }
 }

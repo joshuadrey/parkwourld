@@ -38,14 +38,16 @@ class CreateRating extends Component {
     }
 
 
+
     render() {
         const { name, rating, comment, userName } = this.state
         return (
-            <div>
+            <div className='whole-page'>
                 <div className="create-form">
-                    <h1>Create A Review</h1>
+                    <h1 className='create-rating-title'>Create A Review</h1>
                     <input
-                        placeholder="Place Review"
+                        className='place-name-box'
+                        placeholder="Place Name"
                         type="text"
                         name="name"
                         value={name}
@@ -53,9 +55,11 @@ class CreateRating extends Component {
                     />
 
                     <ReactStars
+                        classNames='stars'
                         count={5}
                         onChange={this.ratingChanged}
                         size={26}
+                        color='white'
                         activeColor="#ffd700"
                         type="number"
                         name="rating"
@@ -65,14 +69,14 @@ class CreateRating extends Component {
                         className="your-review"
                         placeholder="Your Review"
                         type="text"
-                        name="reviewText"
+                        name="comment"
                         value={comment}
                         onChange={this.handleInput}
                     />
 
                     <button className="submit-review" onClick={this.handleSend}>
                         Submit
-          </button>
+                    </button>
                 </div>
             </div >
 

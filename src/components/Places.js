@@ -1,4 +1,5 @@
 import Header from './Header'
+import AddPlace from './AddPlace'
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
@@ -7,6 +8,8 @@ import { useState, useEffect } from 'react'
 
 const Places = (props) => {
     const [place, setPlace] = useState([])
+    const [pay, setPay] = useState(false)
+    const [free, setFree] = useState(false)
     const [create, setCreate] = useState({
         name: "",
         pay: "",
@@ -29,51 +32,58 @@ const Places = (props) => {
     // }
 
 
-    const filterArray = () => {
-        if (this.pay === true) {
-            return filterArray
-        }else {
-            return null
-        }
-    }
 
 
 
 
 
-return (
-    <div className='places'>
-        <div className='title1'>
-            <Header />
-            <h1 className='place-title'>Places</h1>
+
+    return (
+        <div className='places'>
+            <div className='title1'>
+                <Header />
+                <h1 className='place-title'>Places</h1>
+            </div>
+            <div className='btn-filters'>
+                <button className='btn1' onClick={() => {setPay(true)
+                setFree(false)}}>Pay</button>
+                <button className='btn2' onClick={() => {setFree(true)
+                setPay(false)}}>Free</button>
+                <button className='btn3' onClick={() => {setPay(false)
+                setFree(false)}}>All</button>
+                <button className='btn4' onClick={AddPlace}>Add</button>
+            </div>
+
+
+            <div className='location-images'>
+                {place.filter((e) => {
+                    if (pay === true) {
+                        return e.pay
+                    }
+                    else if (free === true) {
+                        return !e.pay
+                    }else {
+                        return true
+                    }
+
+                }).map((place) => {
+                    return (
+                        <div className='individual-locations' key={place.id}>
+                            <h4 className='place-name'>{place.name}</h4>
+                            <img className='pics' src={place.image} />
+                            <Link to='/ratings' className='ratings-btn'>Rate</Link>
+                        </div>
+                    )
+                })}
+            </div>
+
+
+
+
+
         </div>
-        <div className='btn-filters'>
-            <button className='btn1' onClick={() => {filterArray()}}>Pay</button>
-            <button className='btn2' onClick={() => {filterArray()}}>Free</button>
-            <button className='btn3' onClick={() => {filterArray()}}>All</button>
-            <button className='btn4'>Add</button>
-        </div>
-
-
-        <div className='location-images'>
-            {place.map((place) => {
-                return (
-                    <div className='individual-locations' key={place.id}>
-                        <h4 className='place-name'>{place.name}</h4>
-                        <img className='pics' src={place.image} />
-                        <Link to='/ratings' className='ratings-btn'>Rate</Link>
-                    </div>
-                )
-            })}
-        </div>
-
-
-
-
-
-    </div>
-)
-        }
+    )
+}
 
 
 

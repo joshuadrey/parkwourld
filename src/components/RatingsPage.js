@@ -72,7 +72,7 @@ const RatingsPage = () => {
                 <p>{rating.user_name}</p>
                 <p>{rating.date_created}</p>
 
-                
+
 
             </div>
 
@@ -80,7 +80,11 @@ const RatingsPage = () => {
     });
     return (
         <div className='ratings'>
-            <Header />
+            <div className='title2'>
+                <Link className='header-link1' to='/places'>Places</Link>
+                <h1 className='ratings-title'>RATINGS</h1>
+                <Header />
+            </div>
             <div className='search-container'>
                 <input
                     className="name"
@@ -109,7 +113,9 @@ const RatingsPage = () => {
                 onAfterOpen={afterOpenModal}
                 onRequestClose={closeModal}
             >{<CreateRating handleSend={handleSend} />}
-                <button onClick={ratingReset}>X</button>
+                <div className='reset-btn-page'>
+                    <button className='reset-btn' onClick={ratingReset}>X</button>
+                </div>
             </Modal>
 
             <div className='mapped-reviews'>{mappedRatings}</div>
