@@ -10,6 +10,7 @@ const Places = (props) => {
     const [place, setPlace] = useState([])
     const [pay, setPay] = useState(false)
     const [free, setFree] = useState(false)
+    const [add, setAdd] = useState(false)
     const [create, setCreate] = useState({
         name: "",
         pay: "",
@@ -31,6 +32,10 @@ const Places = (props) => {
     //         })
     // }
 
+    const toggleAdd = () => {
+        setAdd(!add)
+    }
+
 
 
 
@@ -40,6 +45,7 @@ const Places = (props) => {
 
     return (
         <div className='places'>
+             {add&& < AddPlace/>}
             <div className='title1'>
                 <Header />
                 <h1 className='place-title'>Places</h1>
@@ -51,9 +57,10 @@ const Places = (props) => {
                 setPay(false)}}>Free</button>
                 <button className='btn3' onClick={() => {setPay(false)
                 setFree(false)}}>All</button>
-                <button className='btn4' onClick={AddPlace}>Add</button>
+                <button className='btn4' onClick={toggleAdd}>Add</button>
             </div>
 
+               
 
             <div className='location-images'>
                 {place.filter((e) => {
