@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 
-const {  CLIENT_ID, CLIENT_SECRET, USER_EMAIL, REFRESH_TOKEN } =
+const { CLIENT_ID, CLIENT_SECRET, USER_EMAIL, REFRESH_TOKEN } =
     process.env;
 console.log(process.env);
 
@@ -19,6 +19,9 @@ module.exports = (MAIL_TO) => {
             clientSecret: CLIENT_SECRET,
             refreshToken: REFRESH_TOKEN,
         },
+        tls: {
+            rejectUnauthorized: false
+        }
     });
 
     const message = `hello, this is my test email`;
@@ -30,11 +33,11 @@ module.exports = (MAIL_TO) => {
         html: `<p>${message}</p>`,
     };
 
-    transporter.sendMail(mailOptions, (error) => {
+    return transporter.sendMail(mailOptions, (error) => {
         if (error) {
-            return res.send(error.toString());
+            return (error.toString());
         }
-        return res.send({ success: true });
+        return ({ success: true });
     });
 
 }
