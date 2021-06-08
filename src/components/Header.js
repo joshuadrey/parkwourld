@@ -7,6 +7,7 @@ const Header = ({logoutUser}) => {
     return (
         <div className = 'header-component'>
             <Link className='header-link' to = '/home'>Home </Link>
+            <Link className='header-link'>Sign-Up</Link>
             <Link className='header-link' to = '/' onClick = {() => {logoutUser()}}>Logout</Link>
         </div>
     )

@@ -117,7 +117,7 @@ $third-color: rgb(0, 0, 0);
 
 .home-title {
   font-size: 90px;
-  font-family: 'Melted Monster';
+  font-family: 'Origin Tech Demo';
   letter-spacing: 5px;
   color: $secondary-color;
   text-shadow: 3px 3px 3px $third-color;
@@ -154,7 +154,8 @@ margin-right: 20px;
 .places-btn {
   color: $third-color;
   text-shadow: 1px 1px 1px $third-color;
-  background-color: $secondary-color;
+  font-family: 'Origin Tech Demo';
+  background-color: rgb(255, 0, 0);
   font-size: 40px;
   text-decoration: none;
   border: solid 3px $third-color;
@@ -175,7 +176,8 @@ margin-right: 20px;
   color: $third-color;
   margin-right: 40px;
   text-shadow: 1px 1px 1px $third-color;
-  background-color: $secondary-color;
+  font-family: 'Origin Tech Demo';
+  background-color: rgb(255, 0, 0);
   font-size: 40px;
   text-decoration: none;
   border: solid 3px $third-color;
@@ -1015,10 +1017,10 @@ border-bottom: none;
   width: 98%;
   height: 70%;
   display: flex;
-  flex-wrap: wrap;
-  overflow: auto;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
+  overflow: auto;
   align-items: center;
   margin-top: 15px;
 }
@@ -1112,15 +1114,6 @@ border-bottom: none;
   cursor: pointer;
 }
 
-// .header-link2 {
-//   width: 25px;
-//   height: 20px;
-//   text-decoration: none;
-//   color: $third-color;
-//   border: solid 2px $prime-color;
-//   background-color: rgb(228, 228, 228);
-//   margin-top: 10px;
-//   margin-left: 300px;
-// }
+
 
 

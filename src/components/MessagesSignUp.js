@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
+var nodemailer = require('nodemailer');
 import axios from 'axios'
 
-class AddPlace extends Component {
+
+
+class MessagesSignUp extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            name: '',
-            pay: '',
-            image: '',
+            email: '',
+            number: 0,
             isOpen: true,
-            payBool: false
+            signUp: false
         }
     }
 
@@ -85,4 +87,4 @@ class AddPlace extends Component {
 
 
 
-export default AddPlace
+export default MessagesSignUp

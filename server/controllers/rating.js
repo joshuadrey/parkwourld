@@ -43,5 +43,17 @@ module.exports = {
         } else {
             res.status(400).send('Rating not updated')
         }
+    },
+
+    deleteRating: async (req, res) => {
+        const db = req.app.get('db')
+        const {id} = req.body;
+
+      db.delete_rating(id)
+      .then( () => res.sendStatus(200) )
+      .catch( err => {
+        res.status(500).send("Could Not Delete");
+        console.log(err)
+      });
     }
 }
