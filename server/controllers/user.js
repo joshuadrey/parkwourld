@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs')
-const mailer = require('../nodemailer')
+// const mailer = require('../nodemailer')
 
 module.exports = {
     registerUser: async (req, res) => {
@@ -14,7 +14,7 @@ module.exports = {
                 const salt = bcrypt.genSaltSync(10)
                 const hash = bcrypt.hashSync(password, salt)
                 const [newUser] = await db.users.register_user([userName, hash])
-                const mailer_result = await mailer(userName)
+                // const mailer_result = await mailer(email)
                 delete newUser.password
 
                 req.session.user = newUser

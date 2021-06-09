@@ -4,6 +4,7 @@ import Home from './components/Home'
 import Places from './components/Places'
 import Tricks from './components/Tricks'
 import RatingsPage from './components/RatingsPage'
+import MessagesSignUp from './components/MessagesSignUp'
 import { HashRouter as Switch, Route } from 'react-router-dom'
 
 
@@ -15,5 +16,6 @@ export default (
         <Route exact path='/places' component={Places} />
         <Route exact path='/tricks' component={Tricks} />
         <Route exact path='/ratings' component={RatingsPage} />
+        <Route exact path='/register' component={MessagesSignUp} />
     </Switch>
 )

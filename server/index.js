@@ -7,6 +7,7 @@ const userCtrl = require("./controllers/user");
 const rateCtrl = require("./controllers/rating");
 const locCtrl = require("./controllers/locations");
 const tricksCtrl = require("./controllers/tricks");
+const subCtrl = require("./controllers/subscribe");
 
 const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env;
 
@@ -61,4 +62,8 @@ app.post('/location/create', locCtrl.createLocation)
 // Endpoint tricks
 
 app.get('/tricks/get', tricksCtrl.getTricks)
+
+// Endpoint subscribe
+
+app.post('/subscribe/register', subCtrl.registerEmail)
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-var nodemailer = require('nodemailer');
 import axios from 'axios'
+import Header from './Header'
+var nodemailer = require('nodemailer');
 
 
 
@@ -15,19 +16,19 @@ class MessagesSignUp extends Component {
         }
     }
 
- 
-
     handleSend = () => {
-        const { name, payBool, image } = this.state
-        axios.post('/location/create', { name, pay: payBool, image })
+        const { email } = this.state
+        axios.post('/subscribe/register', { email })
             .then((res) => {
                 this.setState({
-                    name: '',
-                    payBool: false,
-                    image: ''
+                    email: '',
                 })
             })
     }
+
+ 
+
+    
 
     handleInput = (e) => {
         const { value, name } = e.target
@@ -39,40 +40,26 @@ class MessagesSignUp extends Component {
 
 
     render() {
-        const { name, pay, image } = this.state
+        const { email} = this.state
         return (
             <div className='whole-page1'>
                 <div className="create-form2">
-                    <h1 className='create-rating-title'>ADD A PLACE</h1>
+                    <h1 className='create-rating-title'>SUBSCRIBE</h1>
+                    <p>Sign up to recive updates on Parkwourld</p>
                     <input
-                        className='place-name-box'
-                        placeholder="Place Name"
+                        className='email'
+                        placeholder="Email"
                         type="text"
-                        name="name"
-                        value={name}
+                        name="email"
+                        value={email}
                         onChange={this.handleInput}
                     />
 
-                    <label className='pay-checked'>Pay</label>
-
-                    <input
-                        className='pay-boolean'
-                        type="checkbox" checked={this.state.payBool}
-                        name="pay"
-                        onChange={(e) => this.setState({payBool: e.target.checked})}
-                    />
-                    <input
-                        className="image-url"
-                        placeholder="image-url"
-                        type="text"
-                        name="image"
-                        value={image}
-                        onChange={this.handleInput}
-                    />
-
-                    <button className="submit-place" onClick={this.handleSend}>
-                        Submit
+                    <button className="subscribe-btn" onClick={this.handleSend}>
+                        Register
                     </button>
+
+                    <Header/>
 
                     
                 </div>

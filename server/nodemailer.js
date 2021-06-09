@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const { CLIENT_ID, CLIENT_SECRET, USER_EMAIL, REFRESH_TOKEN } =
     process.env;
-console.log(process.env);
+// console.log(process.env);
 
 module.exports = (MAIL_TO) => {
 
@@ -24,12 +24,12 @@ module.exports = (MAIL_TO) => {
         }
     });
 
-    const message = `hello, this is my test email`;
+    const message = `Hello! Thanks for subscribing to Parkwourld! You will now begin to recive Updates and Messages about our website! You can unsubscrribe anytime.`;
 
     const mailOptions = {
         from: USER_EMAIL,
         to: MAIL_TO,
-        subject: 'TESTING',
+        subject: 'SUBSCRIBED',
         html: `<p>${message}</p>`,
     };
 
