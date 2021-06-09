@@ -71,7 +71,10 @@ const RatingsPage = () => {
                 <p>{rating.comment}</p>
                 <p>{rating.user_name}</p>
                 <p>{rating.date_created}</p>
-
+                <div className='edit-delete-btns'>
+                <button className='edit-btn'>Edit</button>
+                <button className='delete-btn'>Delete</button>
+                </div>
 
 
             </div>
