@@ -32,24 +32,23 @@ module.exports = {
 
     updateRating: async (req, res) => {
         const db = req.app.get('db')
-        let { name, rating, comment } = req.body
-        const editRating = await db.ratings.edit_rating(
-            name,
-            rating,
-            comment,
+        let { a, b, c } = req.body
+        const {id} = req.params
+        await db.ratings.edit_rating(
+            id,
+            a,
+            b,
+            c,
         )
-        if (editRating) {
-            res.status(200).send(editRating)
-        } else {
-            res.status(400).send('Rating not updated')
-        }
+            res.status(200).send("Edited")
+        
     },
 
     deleteRating: async (req, res) => {
         const db = req.app.get('db')
-        const {id} = req.body;
+        const {id} = req.params;
 
-      db.delete_rating(id)
+      db.ratings.delete_rating(id)
       .then( () => res.sendStatus(200) )
       .catch( err => {
         res.status(500).send("Could Not Delete");

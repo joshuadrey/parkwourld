@@ -51,8 +51,8 @@ app.get('/auth/user', checkUser, userCtrl.getUser)
 
 app.post('/rating/create', rateCtrl.createRating)
 app.post('/rating/name', rateCtrl.getRating)
-app.post('/rating/edit', rateCtrl.updateRating)
-app.post('/rating/delete', rateCtrl.deleteRating)
+app.put('/rating/edit/:id', rateCtrl.updateRating)
+app.delete('/rating/delete/:id', rateCtrl.deleteRating)
 
 // Endpoint locations
 

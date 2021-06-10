@@ -4,22 +4,19 @@ import ReactStars from "react-rating-stars-component";
 import Modal from 'react-modal'
 import { connect } from 'react-redux'
 import CreateRating from './CreateRating'
+import RatingItem from './RatingItem'
 import Header from './Header'
 import { Link } from 'react-router-dom'
 
 const RatingsPage = () => {
 
-    const [ratings, setRatings] = useState([]);
+    const [ratings, setRating] = useState([]);
+    const [remove, setRemove] = useState()
     const [modalIsOpen, setIsOpen] = useState(false);
     const [ratingInput, setRatingsInput] = useState("");
 
-    const [update, setUpdate] = useState({
-        name: "",
-        rating: "",
-        comment: "",
-        userName: "",
 
-    });
+
 
     useEffect(() => {
         console.log(modalIsOpen)
@@ -41,43 +38,59 @@ const RatingsPage = () => {
         axios.post('/rating/name', { name: ratingInput })
             .then((res) => {
                 console.log(res.data)
-                setRatings(res.data)
+                setRating(res.data)
             }).catch((err) => {
                 console.log(err, 'No Ratings Available')
             })
     }
+
+
+    const removeRating = (id) => {
+        axios.delete(`/rating/delete/${id}`)
+            .then((res) => {
+                console.log(res.data)
+                ratingSearch()
+            }).catch((err) => {
+                console.log(err, 'Cant delete')
+            })
+    }
+
+    
 
     function ratingReset() {
         closeModal()
         ratingSearch()
     }
 
-    const handleSend = () => {
-        const { name, rating, comment, userName } = this.state
-        axios.post('/rating/create', update)
+    const handleSend = (id, a, b, c) => {
+        axios.put(`/rating/edit/${id}`, {a, b, c})
             .then((res) => {
-                setUpdate(res.data)
-            })
+                ratingSearch()
+            }).catch(err => console.log(err))
     }
 
 
     const mappedRatings = ratings.map((rating) => {
         return (
-            <div className='review-boss' key={rating.id}>
-                <h3>{rating.name}</h3>
-                <p>
-                    <ReactStars value={rating.rating} />
-                </p>
-                <p>{rating.comment}</p>
-                <p>{rating.user_name}</p>
-                <p>{rating.date_created}</p>
-                <div className='edit-delete-btns'>
-                <button className='edit-btn'>Edit</button>
-                <button className='delete-btn'>Delete</button>
-                </div>
+            <RatingItem
+            rating={rating}
+            handleSend={handleSend}
+            removeRating={removeRating}/>
+            // <div className='review-boss' key={rating.id}>
+            //     <h3>{rating.name}</h3>
+            //     <p>
+            //         <ReactStars value={rating.rating} />
+            //     </p>
+            //     <p>{rating.comment}</p>
+            //     <p>{rating.user_name}</p>
+            //     <p>{rating.date_created}</p>
+            //     <div className='edit-delete-btns'>
+            //     <button className='edit-btn' onClick={() => handleSend(rating.id, name || rating.name, comment || rating.comment, editratingInput || rating.rating)}>Edit</button>
+            //     <button className='delete-btn' onClick={() => removeRating(rating.id)}>Delete</button>
+            //     </div>
 
 
-            </div>
+            // </div>
 
         );
     });

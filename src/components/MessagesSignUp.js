@@ -67,6 +67,10 @@ class MessagesSignUp extends Component {
                         Register
                     </button>
 
+                    <div className='hidden-box'>
+                    <Link className='hidden-button'  to='/hiddenSubscribers'>subscribers</Link>
+                    </div>
+
 
                     
                 </div>

@@ -63,6 +63,7 @@ const Auth = ({ getUser }) => {
                     className='auth-input-password'
                     placeholder='Password'
                     name='password'
+                    type='password'
                     onChange={(e) => changeHandler(e)}
                 />
                 <div className = 'btn'>

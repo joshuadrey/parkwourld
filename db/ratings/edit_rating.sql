@@ -1,5 +1,6 @@
 UPDATE rating
-SET rating = $2
-WHERE user_name = $5
-SELECT * FROM rating
-ORDER BY user_name;
+SET name = $2,
+rating = $4,
+comment = $3
+WHERE id = $1;
+
